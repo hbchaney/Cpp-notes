@@ -24,18 +24,16 @@ int main()
 
     cout << "the root is : " << square_root << endl; 
 
-    //abs value 
+    //abs value of int 
     int abs_num = -4; 
     
     cout << "used to be : " << abs_num << " now is : " << abs(abs_num) << endl;
 
+    //abs value of a float 
+    float abs_flt = -4.05;
 
+     cout << "used to be : " << abs_flt << " now is : " << fabs(abs_flt) << endl;
 
-
-
-
-    
-    
     return(0);
 
 }
