@@ -21,6 +21,8 @@ int main()
 
     cout << static_cast<int>(number * 1.5) << endl;
 
+    return(0);
+
 
 
     
