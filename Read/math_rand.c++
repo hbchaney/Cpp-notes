@@ -32,8 +32,12 @@ int main()
     //abs value of a float 
     float abs_flt = -4.05;
 
-     cout << "used to be : " << abs_flt << " now is : " << fabs(abs_flt) << endl;
+    cout << "used to be : " << abs_flt << " now is : " << fabs(abs_flt) << endl;
 
+    //generating a random number between 0 and 1 
+    //rand() generates a random number between 
+
+    
     return(0);
 
 }
