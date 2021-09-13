@@ -3,6 +3,8 @@
 #include <iostream>
 #include <math.h> // i think these functions are from this library 
 #include <stdio.h>
+#include <cstdlib>
+#include <ctime> 
 
 using namespace std;
 
@@ -37,7 +39,14 @@ int main()
     //generating a random number between 0 and 1 
     //rand() generates a random number between 
 
-    
+    int dice = 0; 
+    srand(time(0)); //uses time as the rand seed
+
+    dice = (rand() % 6 ) + 1; //takes this rand number and uses modulo need to add 1 cause math
+
+    cout << "this is what the dice rolled " << dice << endl;
+
+
     return(0);
 
 }
