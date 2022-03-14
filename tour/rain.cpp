@@ -1,10 +1,42 @@
-#include <dos.h> 
+#include <thread> 
+#include <chrono> 
 #include <iostream> 
+#include <stdlib.h>
 using namespace std; 
 
 
-void matrix (char* m , int dim1, int dim2) {
+void matrixlower (char* m , int dim1, int dim2) {
 
+    //updates the lower part of the matrix 
+    //starts from the bottom and stops at the second row 
+
+    for (int r = dim1; r > 0; r--) {
+        for (int c = 0; c<dim2; c++) { 
+            m[r*dim2+c] = m[(r-1)*dim2 +c];
+        }
+    }
+
+
+}
+
+void matrixupper (char* m , int dim1, int dim2) { 
+    char rain = '.';
+    char snow = 'x';
+    
+    for (int i; i<dim2;i++) { 
+
+        int random = rand() % 100;
+        if (random > 85 && random <= 95) { 
+            m[i] = rain;
+        }
+        else if (random > 95) {
+            m[i] = snow;
+        }
+        else {
+            m[i] = ' ';
+        }
+
+    }
 }
 
 void print (char* m , int dim1, int dim2) { 
@@ -35,8 +67,34 @@ int main () {
 
         }
     }
+    system("CLS");
+    print(m[0],y,x);
 
-    print(&m[0][0],y,x);
+
+    this_thread::sleep_for(chrono::milliseconds(50));
+    matrixupper(m[0],y,x);
+    system("CLS");
+    print(m[0],y,x);
+
+    for (int i = 0; i < 60; i++) { 
+
+    this_thread::sleep_for(chrono::milliseconds(50));
+    matrixupper(m[0],y,x);
+    system("CLS");
+    print(m[0],y,x);
+
+    this_thread::sleep_for(chrono::milliseconds(50));
+    matrixlower(m[0],y,x);
+    system("CLS");
+    print(m[0],y,x);
+
+    }
+
+
+
+    
+
+
 
 
 
