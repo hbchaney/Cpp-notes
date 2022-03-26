@@ -88,6 +88,16 @@ int main () {
     system("CLS");
     print(m[0],y,x);
 
+    this_thread::sleep_for(chrono::milliseconds(50));
+    matrixlower(m[0],y,x);
+    system("CLS");
+    print(m[0],y,x);
+
+    this_thread::sleep_for(chrono::milliseconds(50));
+    matrixlower(m[0],y,x);
+    system("CLS");
+    print(m[0],y,x);
+
     }
 
 
