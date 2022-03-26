@@ -28,9 +28,17 @@ class Handle {
         cout << endl; 
     }
 
-
+    friend ostream& operator<< (ostream& os,Handle H )  {
+        for (int i=0;i<H.sz;i++) {
+            os << H.v[i] << ' ';
+            
+        }
+        return os;
+    }
 
 };
+
+
 
 // template<typename T>
 // class Matrix { 
@@ -60,7 +68,11 @@ int main () {
     // Handle<int> H {4} ; 
     // H.print();
 
-    Handle<int> B[4] {4,4,4,8}; 
+    Handle<double> B {8};
+    cout << B << endl;
+
+    return 0;
+
 
 
     
