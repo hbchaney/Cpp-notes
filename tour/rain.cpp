@@ -5,7 +5,7 @@
 using namespace std; 
 
 
-void matrixlower (char* m , int dim1, int dim2) {
+inline void matrixlower (char* m , int dim1, int dim2) {
 
     //updates the lower part of the matrix 
     //starts from the bottom and stops at the second row 
@@ -19,7 +19,7 @@ void matrixlower (char* m , int dim1, int dim2) {
 
 }
 
-void matrixupper (char* m , int dim1, int dim2) { 
+inline void matrixupper (char* m , int dim1, int dim2) { 
     char rain = '.';
     char snow = 'x';
     
@@ -39,7 +39,7 @@ void matrixupper (char* m , int dim1, int dim2) {
     }
 }
 
-void print (char* m , int dim1, int dim2) { 
+inline void print (char* m , int dim1, int dim2) { 
 
 
 for (int r = 0; r<dim1; r++) { 
