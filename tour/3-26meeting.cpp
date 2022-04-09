@@ -26,11 +26,17 @@ void fprinter (char* arr,int dim) {
 
 void fadjuster (char* arr, int dim,int count) { 
 
-    int x = count % dim; 
-    int y = (count + 2) % dim;
+    int x = (count + dim -2) % dim; 
+    int y = (count + dim ) % dim;
+
+    // int x1 = dim - (count % dim);
+    // int y1 = dim - ((count + 2) % dim);
 
     arr[x] = ' ';
-    arr[y] = '.';
+    arr[y] = '~';
+
+    // arr[x1] = ' '; 
+    // arr[y1] = '~'; 
 
 
 }
