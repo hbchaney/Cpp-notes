@@ -1,0 +1,3 @@
+C:\sdks\cmake_install\cmake-3.23.0-rc3-windows-x86_64\bin\cmake.exe -E rm -f CMakeFiles\node_mapper.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe qc CMakeFiles\node_mapper.dir/objects.a @CMakeFiles\node_mapper.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE -g -Wl,--whole-archive CMakeFiles\node_mapper.dir/objects.a -Wl,--no-whole-archive -o node_mapper.exe -Wl,--out-implib,libnode_mapper.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\node_mapper.dir\linklibs.rsp
